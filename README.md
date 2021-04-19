@@ -100,3 +100,49 @@ git config alias.lg "git log --oneline --decorate --all --graph" # Ejemplo para 
 
 git lg # Llamamos al alias que creamos
 ```
+
+## 📃 Trabajando con archivos modificados y commits
+Ver cambios entre archivos
+```bash
+git diff
+```
+Ver cambios entre archivos que estan en el stage
+```bash
+git diff --staged
+```
+Editar el mensaje del último commit
+```bash
+git commit --amend -m "<nuevo_mensaje>"
+```
+Revertir al último commit
+```bash
+git reset --soft HEAD
+```
+Revertir al padre del último commit
+```bash
+git reset --soft HEAD^
+```
+Revertir cambios conservando el stage
+```bash
+git reset --soft <id_del_commit>
+```
+Revertir cambios conservando eliminando el stage pero conservando los cambios
+```bash
+git reset --mixed <id_del_commit>
+```
+Revertir cambios eliminando todo
+```bash
+git reset --hard <id_del_commit>
+```
+Mostrar log de todas las acciones realizadas
+```bash
+git reflog
+```
+Renombrar un archivo
+```bash
+git mv <nombre_archivo_actual> <nombre_archivo_nuevo>
+```
+Eliminar un archivo
+```bash
+git rm <nombre_del_archivo>
+```
