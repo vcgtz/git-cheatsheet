@@ -146,3 +146,33 @@ Eliminar un archivo
 ```bash
 git rm <nombre_del_archivo>
 ```
+
+## 🌳 Trabajando con ramas
+Crear una rama
+```bash
+git branch <nombre_de_la_rama>
+```
+Ver todas las ramas
+```bash
+git branch
+```
+Cambiarse a una rama
+```bash
+git checkout <nombre_de_la_rama>
+```
+Diferecias entre ramas
+```bash
+git diff <nombre_de_la_rama> <nombre_de_la_rama>
+```
+Unir ramas
+```bash
+git merge <nombre_de_la_rama> # Desde la rama a la que se quieren mezclar los cambios
+```
+Eliminar una rama
+```bash
+git branch -d <nombre_de_la_rama>
+```
+Crear y cambiarse a una rama
+```bash
+git checkout -b <nombre_de_la_rama>
+```
