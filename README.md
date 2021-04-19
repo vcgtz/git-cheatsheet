@@ -203,7 +203,7 @@ Ver información de un tag
 git show <nombre_del_tag>
 ```
 
-## Comandos avanzados: Stash y rebase
+## 🛠 Comandos avanzados: Stash y rebase
 Enviar los cambios actuales al stash
 ```bash
 git stash
@@ -298,4 +298,40 @@ git commit "<mensaje_del_commit>" # Creamos el nuevo commit, los últimos dos pa
 ```
 ```bash
 git rebase --continue # Finalizamos la edición
+```
+
+## ☁ Repositorios remotos
+Ligar el repositorio local con uno remoto
+```bash
+git remote add origin <url_del_repo>
+```
+Ver los reposotiorios remotos
+```bash
+git remote -v
+```
+Subir los cambios al repositorio
+```bash
+git push -u <remoto> <rama> # -u sirve para establecer la rama master como default
+```
+```bash
+git push -u origin master
+```
+Subir los tags al repositorio
+```bash
+git push --tags
+```
+Bajar cambios del repositorio
+```bash
+git pull <remoto> <rama>
+```
+```bash
+git pull origin master
+```
+Clonar un repositorio
+```bash
+git clone <url_del_repo>
+```
+Clonar un repositorio especificando el nombre de la carpeta
+```bash
+git clone <url_del_repo> <nombre_carpeta>
 ```
