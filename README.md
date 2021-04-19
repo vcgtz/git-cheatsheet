@@ -176,3 +176,29 @@ Crear y cambiarse a una rama
 ```bash
 git checkout -b <nombre_de_la_rama>
 ```
+
+## Trabajando con tags
+Crear un tag
+```bash
+git tag <nombre_del_tag>
+```
+Mostrar todos los tags
+```bash
+git tag
+```
+Borrar un tag
+```bash
+git tag -d <nombre_del_tag>
+```
+Crear un tag con anotaciones
+```bash
+git tag -a <nombre_del_tag> -m "<mensaje>"
+```
+Crear un tag con anotaciones de un commit pasado
+```bash
+git tag -a <nombre_del_tag> <id_del_commit> -m "<mensaje>"
+```
+Ver información de un tag
+```bash
+git show <nombre_del_tag>
+```
