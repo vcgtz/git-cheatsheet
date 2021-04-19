@@ -177,7 +177,7 @@ Crear y cambiarse a una rama
 git checkout -b <nombre_de_la_rama>
 ```
 
-## Trabajando con tags
+## 🏷 Trabajando con tags
 Crear un tag
 ```bash
 git tag <nombre_del_tag>
@@ -201,4 +201,101 @@ git tag -a <nombre_del_tag> <id_del_commit> -m "<mensaje>"
 Ver información de un tag
 ```bash
 git show <nombre_del_tag>
+```
+
+## Comandos avanzados: Stash y rebase
+Enviar los cambios actuales al stash
+```bash
+git stash
+```
+Mostrar todos los cambios en el stash
+```bash
+git stash list
+```
+Recuperar y eliminar el último cambio del stash
+```bash
+git stash pop
+```
+Eliminar el último cambio del stash
+```bash
+git stash drop
+```
+Enviar los cambios actuales al stash con un comentario
+```bash
+git stash save "<comentario>"
+```
+Recuperar la última entrada del stash sin eliminarla
+```bash
+git stash apply
+```
+Recuperar una entrada específica del stash
+```bash
+git stash apply <id_del_stash>
+```
+```bash
+git stash apply stash@{1}
+```
+Enviar los cambios actuales al stash sin incluir los cambios del stage
+```bash
+git stash save --keep-index
+```
+Enviar los cambios actuales al stash incluyendo los archivos sin segumiento
+```bash
+git stash save --include-untracked
+```
+Borrar todas las entradas del stash
+```bash
+git stash clear
+```
+Reordenar commits
+```bash
+git rebase <nombre_de_la_rama> # Desde la rama de la cual quiero mover los commits
+```
+```bash
+git rebase master # Desde development
+```
+Unir dos commits
+```bash
+git rebase -i HEAD~<no_de_commits>
+```
+```bash
+git rebase -i HEAD~4 # Los últimos 4 commits
+```
+```bash
+pick <id_del_commit> <mensaje_del_commit>
+pick <id_del_commit> <mensaje_del_commit>
+pick <id_del_commit> <mensaje_del_commit>
+squash <id_del_commit> <mensaje_del_commit> # Fusiona este commit con el commit superior
+```
+Editar el mensaje del commit
+```bash
+git rebase -i HEAD~<no_de_commits>
+```
+```bash
+git rebase -i HEAD~1 # El último commit
+```
+```bash
+reword <id_del_commit> <mensaje_del_commit>
+```
+Separar archivos de un commit en varios commit
+```bash
+git rebase -i HEAD~<no_de_commits>
+```
+```bash
+git rebase -i HEAD~1 # El último commit
+```
+```bash
+edit <id_del_commit> <mensaje_del_commit>
+```
+```bash
+git reset HEAD^ # Revertir los cambios del último commit
+```
+```bash
+git add <ruta_del_archivo> # Agregamos los archivos para un nuevo commit
+```
+```bash
+git commit "<mensaje_del_commit>" # Creamos el nuevo commit, los últimos dos pasos se repiten hasta tener todos los commits necesarios
+```
+```bash
+git rebase --continue # Finalizamos la edición
 ```
