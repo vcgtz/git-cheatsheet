@@ -74,3 +74,29 @@ Agregar varios elementos comúnes en el directorio actual
 ```bash
 git add .jpg # Agrega todas las imágenes jpg del directorio actual
 ```
+
+## ✏ Utilidades básicas
+Mostrar el log de forma compacta
+```bash
+git log --oneline
+```
+Mostrar el log de forma alternativa (compacta, todas las ramas y visualmente mas llamativo)
+```bash
+git log --oneline --decorate --all --graph
+```
+Mostrar el estatus de forma compacta
+```bash
+git status -s 
+```
+Mostrar el estatus de forma compacta mostrando la rama actual
+```bash
+git status -s -b
+```
+Crear alias para comandos
+```bash
+git config alias.<alias> "<comando>"
+
+git config alias.lg "git log --oneline --decorate --all --graph" # Ejemplo para crear un alias
+
+git lg # Llamamos al alias que creamos
+```
